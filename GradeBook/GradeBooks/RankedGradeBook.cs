@@ -29,13 +29,13 @@ namespace GradeBook.GradeBooks
                 }
             }
 
-            if (rank < (int)(Students.Count * 0.8))
+            if (rank <= (int)(Students.Count * 0.2))
                 result = 'A';
-            else if (rank < (int)(Students.Count * 0.6))
+            else if (rank <= (int)(Students.Count * 0.4))
                 result = 'B';
-            else if (rank < (int)(Students.Count * 0.4))
+            else if (rank <= (int)(Students.Count * 0.6))
                 result = 'C';
-            else if (rank < (int)(Students.Count * 0.2))
+            else if (rank <= (int)(Students.Count * 0.8))
                 result = 'D';
             else
             {
