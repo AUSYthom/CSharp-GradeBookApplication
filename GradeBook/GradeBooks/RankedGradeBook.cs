@@ -17,9 +17,8 @@ namespace GradeBook.GradeBooks
             if (Students.Count < 5)
                 throw new InvalidOperationException("Ranked grade need at least more than 5 student;");
 
-            //int threshold = (int)(Students.Count*0.2);
-
             int rank = 1;
+            int threshold = (int)Math.Ceiling(Students.Count * 0.2);
 
             foreach (Student person in Students)
             {
@@ -29,18 +28,16 @@ namespace GradeBook.GradeBooks
                 }
             }
 
-            if (rank <= (int)(Students.Count * 0.2))
+            if (rank <= threshold)
                 result = 'A';
-            else if (rank <= (int)(Students.Count * 0.4))
+            else if (rank <= threshold+1)
                 result = 'B';
-            else if (rank <= (int)(Students.Count * 0.6))
+            else if (rank <= threshold+2)
                 result = 'C';
-            else if (rank <= (int)(Students.Count * 0.8))
+            else if (rank <= threshold+3)
                 result = 'D';
             else
-            {
                 result = 'F';
-            }
 
             return result;
         }
