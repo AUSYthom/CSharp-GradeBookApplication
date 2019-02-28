@@ -12,8 +12,6 @@ namespace GradeBook.GradeBooks
 
         public override char GetLetterGrade(double averageGrade)
         {
-            char result;
-
             if (Students.Count < 5)
                 throw new InvalidOperationException("Ranked grade need at least more than 5 student;");
 
@@ -29,17 +27,15 @@ namespace GradeBook.GradeBooks
             }
 
             if (rank <= threshold)
-                result = 'A';
+                return 'A';
             else if (rank <= threshold*2)
-                result = 'B';
+                return 'B';
             else if (rank <= threshold*3)
-                result = 'C';
+                return 'C';
             else if (rank <= threshold*4)
-                result = 'D';
+                return 'D';
             else
-                result = 'F';
-
-            return result;
+                return 'F';
         }
     }
 }
