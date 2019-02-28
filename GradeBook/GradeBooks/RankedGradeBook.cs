@@ -30,11 +30,11 @@ namespace GradeBook.GradeBooks
 
             if (rank <= threshold)
                 result = 'A';
-            else if (rank <= threshold+1)
+            else if (rank <= threshold*2)
                 result = 'B';
-            else if (rank <= threshold+2)
+            else if (rank <= threshold*3)
                 result = 'C';
-            else if (rank <= threshold+3)
+            else if (rank <= threshold*4)
                 result = 'D';
             else
                 result = 'F';
