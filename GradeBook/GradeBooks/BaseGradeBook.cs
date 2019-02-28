@@ -116,8 +116,7 @@ namespace GradeBook.GradeBooks
             switch (letterGrade)
             {
                 case 'A':
-                    gpa = 0;
- = 4;
+                    gpa = 4;
                     break;
                 case 'B':
                     gpa = 3;
